@@ -1,0 +1,23 @@
+.sidebar{
+
+    width:
+
+    var(--sidebar-width);
+
+    background:
+
+    white;
+
+    height:100vh;
+
+    position:fixed;
+
+    left:0;
+
+    top:0;
+
+    box-shadow:
+
+    var(--shadow);
+
+}

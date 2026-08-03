@@ -1,0 +1,240 @@
+{% extends "base.html" %}
+
+{% block title %}
+Login | Cybersecurity Threat Analytics
+{% endblock %}
+
+{% block extra_css %}
+
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/login.css') }}">
+
+{% endblock %}
+
+{% block content %}
+
+<section class="auth-page">
+
+    <div class="background-grid"></div>
+
+    <div class="auth-container">
+
+        <!-- =======================================
+             LEFT SIDE
+        ======================================== -->
+
+        <div class="auth-left">
+
+            <div class="brand">
+
+                <h1>🛡 Cyber Threat Analytics</h1>
+
+                <p>
+
+                    AI Powered Cybersecurity Analytics Platform
+
+                </p>
+
+            </div>
+
+            <div class="features">
+
+                <div class="feature-card">
+
+                    <h3>Threat Detection</h3>
+
+                    <p>
+
+                        Detect suspicious network traffic using
+                        Machine Learning.
+
+                    </p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <h3>AI Intelligence</h3>
+
+                    <p>
+
+                        AI generated security insights and
+                        recommendations.
+
+                    </p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <h3>Analytics Dashboard</h3>
+
+                    <p>
+
+                        Interactive charts and real-time
+                        cybersecurity analytics.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- =======================================
+             RIGHT SIDE
+        ======================================== -->
+
+        <div class="auth-right">
+
+            <div class="login-card">
+
+                <h2>
+
+                    Welcome Back
+
+                </h2>
+
+                <p>
+
+                    Login to continue
+
+                </p>
+
+                <form
+                    action="{{ url_for('auth.login') }}"
+                    method="POST"
+                    id="loginForm">
+
+                    <!-- Email -->
+
+                    <div class="input-group">
+
+                        <label>
+
+                            Email Address
+
+                        </label>
+
+                        <input
+
+                            id="email"
+
+                            type="email"
+
+                            name="email"
+
+                            placeholder="Enter your email"
+
+                            autocomplete="email"
+
+                            required>
+
+                    </div>
+
+                    <!-- Password -->
+
+                    <div class="input-group">
+
+                        <label>
+
+                            Password
+
+                        </label>
+
+                        <div class="password-box">
+
+                            <input
+
+                                id="password"
+
+                                type="password"
+
+                                name="password"
+
+                                placeholder="Enter your password"
+
+                                autocomplete="current-password"
+
+                                required>
+
+                            <button
+
+                                type="button"
+
+                                id="togglePassword"
+
+                                class="eye-btn">
+
+                                👁
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Remember -->
+
+                    <div class="remember-row">
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                name="remember">
+
+                            Remember Me
+
+                        </label>
+
+                        <a href="{{ url_for('auth.forgot_password') }}">
+
+                            Forgot Password?
+
+                        </a>
+
+                    </div>
+
+                    <!-- Button -->
+
+                    <button
+
+                        type="submit"
+
+                        class="login-btn">
+
+                        Login
+
+                    </button>
+
+                </form>
+
+                <div class="bottom-link">
+
+                    Don't have an account?
+
+                    <a href="{{ url_for('auth.register') }}">
+
+                        Register
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+
+<script src="{{ url_for('static', filename='js/login.js') }}"></script>
+
+{% endblock %}

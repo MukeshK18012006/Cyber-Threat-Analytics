@@ -1,0 +1,64 @@
+/* =====================================
+   Cybersecurity Threat Analytics
+   Global Variables
+===================================== */
+
+:root{
+
+    /* Primary Colors */
+
+    --primary:#2563EB;
+    --primary-dark:#1D4ED8;
+    --secondary:#3B82F6;
+    --accent:#06B6D4;
+
+    /* Background */
+
+    --background:#F4F8FF;
+    --surface:#FFFFFF;
+
+    /* Text */
+
+    --text-dark:#1E293B;
+    --text-light:#64748B;
+
+    /* Status */
+
+    --success:#22C55E;
+    --warning:#FACC15;
+    --danger:#EF4444;
+
+    /* Glass */
+
+    --glass:rgba(255,255,255,.65);
+
+    --glass-border:
+    rgba(255,255,255,.55);
+
+    --blur:18px;
+
+    /* Shadow */
+
+    --shadow:
+
+    0 10px 30px
+
+    rgba(0,0,0,.08);
+
+    /* Radius */
+
+    --radius:18px;
+
+    /* Animation */
+
+    --transition:.35s ease;
+
+    /* Navbar */
+
+    --navbar-height:75px;
+
+    /* Sidebar */
+
+    --sidebar-width:270px;
+
+}

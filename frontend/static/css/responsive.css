@@ -1,0 +1,260 @@
+/* ===========================================
+   LARGE LAPTOPS (1200px)
+=========================================== */
+
+@media (max-width:1200px){
+
+.container{
+
+    width:95%;
+
+}
+
+.hero h1{
+
+    font-size:55px;
+
+}
+
+.hero p{
+
+    font-size:18px;
+
+}
+
+.hero-right{
+
+    gap:20px;
+
+}
+
+}
+
+
+/* ===========================================
+   LAPTOPS (992px)
+=========================================== */
+
+@media (max-width:992px){
+
+/* Hero */
+
+.hero-container{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+}
+
+.hero-left{
+
+    order:2;
+
+}
+
+.hero-right{
+
+    order:1;
+
+    margin-bottom:40px;
+
+}
+
+/* Buttons */
+
+.hero-buttons{
+
+    justify-content:center;
+
+}
+
+/* Features */
+
+.hero-features{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+/* Statistics */
+
+.stats-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+/* Navbar */
+
+.navbar{
+
+    flex-wrap:wrap;
+
+    height:auto;
+
+    padding:20px;
+
+}
+
+.navbar-menu{
+
+    width:100%;
+
+    justify-content:center;
+
+    margin-top:20px;
+
+}
+
+.navbar-actions{
+
+    margin-top:20px;
+
+    width:100%;
+
+    justify-content:center;
+
+}
+
+}
+
+
+/* ===========================================
+   TABLETS (768px)
+=========================================== */
+
+@media (max-width:768px){
+
+.hero{
+
+    padding:60px 0;
+
+}
+
+.hero h1{
+
+    font-size:42px;
+
+}
+
+.hero p{
+
+    font-size:17px;
+
+}
+
+.hero-right{
+
+    grid-template-columns:1fr;
+
+}
+
+.hero-features{
+
+    grid-template-columns:1fr;
+
+}
+
+.stats-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.navbar-menu{
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.logo-text h2{
+
+    font-size:22px;
+
+}
+
+.logo-text p{
+
+    font-size:12px;
+
+}
+
+}
+
+
+/* ===========================================
+   MOBILE (576px)
+=========================================== */
+
+@media (max-width:576px){
+
+.container{
+
+    width:94%;
+
+}
+
+.hero h1{
+
+    font-size:34px;
+
+}
+
+.hero p{
+
+    font-size:16px;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+}
+
+.btn-primary{
+
+    width:100%;
+
+}
+
+.btn-outline{
+
+    width:100%;
+
+}
+
+.glass-card{
+
+    padding:25px;
+
+}
+
+.logo-icon{
+
+    font-size:28px;
+
+}
+
+.logo-text h2{
+
+    font-size:18px;
+
+}
+
+.logo-text p{
+
+    display:none;
+
+}
+
+.navbar{
+
+    padding:15px;
+
+}
+
+}

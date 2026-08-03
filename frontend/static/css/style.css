@@ -1,0 +1,33 @@
+body{
+
+    margin:0;
+
+    padding:0;
+
+    font-family:Arial;
+
+    background:#f5f8ff;
+
+    text-align:center;
+
+}
+
+h1{
+
+    margin-top:120px;
+
+    color:#0d47a1;
+
+}
+
+h3{
+
+    color:#555;
+
+}
+
+p{
+
+    color:#777;
+
+}

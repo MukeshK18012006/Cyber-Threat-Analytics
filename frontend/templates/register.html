@@ -1,0 +1,409 @@
+{% extends "base.html" %}
+
+{% block title %}
+Register | Cybersecurity Threat Analytics
+{% endblock %}
+
+{% block extra_css %}
+
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/register.css') }}">
+
+{% endblock %}
+
+{% block content %}
+
+<section class="auth-page">
+
+    <!-- Background -->
+
+    <div class="background-grid"></div>
+
+    <div class="auth-container">
+
+        <!-- ==========================================
+             LEFT SIDE
+        =========================================== -->
+
+        <div class="auth-left">
+
+            <div class="brand">
+
+                <h1>
+
+                    🛡 Cyber Threat Analytics
+
+                </h1>
+
+                <p>
+
+                    AI Powered Cybersecurity Analytics Platform
+
+                </p>
+
+            </div>
+
+            <div class="features">
+
+                <div class="feature-card">
+
+                    <h3>
+
+                        Secure Authentication
+
+                    </h3>
+
+                    <p>
+
+                        Create your secure account using encrypted password protection.
+
+                    </p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <h3>
+
+                        AI Powered Analytics
+
+                    </h3>
+
+                    <p>
+
+                        Access AI-driven cybersecurity analytics and threat intelligence.
+
+                    </p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <h3>
+
+                        Real-Time Monitoring
+
+                    </h3>
+
+                    <p>
+
+                        Monitor threats, risks and analytics through interactive dashboards.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ==========================================
+             RIGHT SIDE
+        =========================================== -->
+
+        <div class="auth-right">
+
+            <div class="login-card">
+
+                <h2>
+
+                    Create Account
+
+                </h2>
+
+                <p>
+
+                    Register to access Cybersecurity Threat Analytics
+
+                </p>
+
+                <form
+
+                    id="registerForm"
+
+                    action="{{ url_for('auth.register') }}"
+
+                    method="POST">
+
+                    <!-- =======================
+                         First Name
+                    ======================== -->
+
+                    <div class="input-group">
+
+                        <label>
+
+                            First Name
+
+                        </label>
+
+                        <input
+
+                            type="text"
+
+                            id="first_name"
+
+                            name="first_name"
+
+                            placeholder="Enter your first name"
+
+                            autocomplete="given-name"
+
+                            required>
+
+                    </div>
+
+                    <!-- =======================
+                         Last Name
+                    ======================== -->
+
+                    <div class="input-group">
+
+                        <label>
+
+                            Last Name
+
+                        </label>
+
+                        <input
+
+                            type="text"
+
+                            id="last_name"
+
+                            name="last_name"
+
+                            placeholder="Enter your last name"
+
+                            autocomplete="family-name"
+
+                            required>
+
+                    </div>
+
+                    <!-- =======================
+                         Email
+                    ======================== -->
+
+                    <div class="input-group">
+
+                        <label>
+
+                            Email Address
+
+                        </label>
+
+                        <input
+
+                            type="email"
+
+                            id="email"
+
+                            name="email"
+
+                            placeholder="Enter your email"
+
+                            autocomplete="email"
+
+                            required>
+
+                    </div>
+
+                    <!-- =======================
+                         Phone Number
+                    ======================== -->
+
+                    <div class="input-group">
+
+                        <label>
+
+                            Phone Number
+
+                        </label>
+
+                        <input
+
+                            type="tel"
+
+                            id="phone"
+
+                            name="phone"
+
+                            placeholder="Enter your phone number"
+
+                            autocomplete="tel"
+
+                            required>
+
+                    </div>
+
+                    <!-- =======================
+                         Password
+                    ======================== -->
+
+                    <div class="input-group">
+
+                        <label>
+
+                            Password
+
+                        </label>
+
+                        <div class="password-box">
+
+                            <input
+
+                                type="password"
+
+                                id="password"
+
+                                name="password"
+
+                                placeholder="Create a password"
+
+                                autocomplete="new-password"
+
+                                required>
+
+                            <button
+
+                                type="button"
+
+                                id="togglePassword"
+
+                                class="eye-btn">
+
+                                👁
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- =======================
+                         Confirm Password
+                    ======================== -->
+
+                    <div class="input-group">
+
+                        <label>
+
+                            Confirm Password
+
+                        </label>
+
+                        <div class="password-box">
+
+                            <input
+
+                                type="password"
+
+                                id="confirm_password"
+
+                                name="confirm_password"
+
+                                placeholder="Confirm your password"
+
+                                autocomplete="new-password"
+
+                                required>
+
+                            <button
+
+                                type="button"
+
+                                id="toggleConfirmPassword"
+
+                                class="eye-btn">
+
+                                👁
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                                        <!-- =======================
+                         Terms & Conditions
+                    ======================== -->
+
+                    <div class="remember-row">
+
+                        <label class="checkbox-label">
+
+                            <input
+                                type="checkbox"
+                                id="terms"
+                                name="terms"
+                                required>
+
+                            I agree to the
+
+                            <a href="#">
+
+                                Terms & Conditions
+
+                            </a>
+
+                            and
+
+                            <a href="#">
+
+                                Privacy Policy
+
+                            </a>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- =======================
+                         Register Button
+                    ======================== -->
+
+                    <button
+                        type="submit"
+                        class="login-btn">
+
+                        Create Account
+
+                    </button>
+
+                </form>
+
+
+                <!-- =======================
+                     Bottom Link
+                ======================== -->
+
+                <div class="bottom-link">
+
+                    Already have an account?
+
+                    <a href="{{ url_for('auth.login') }}">
+
+                        Login
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
+
+
+{% block extra_js %}
+
+<script src="{{ url_for('static', filename='js/register.js') }}"></script>
+
+{% endblock %}

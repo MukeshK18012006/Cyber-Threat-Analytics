@@ -1,0 +1,80 @@
+<nav class="navbar">
+
+    <!-- Logo -->
+    <div class="navbar-logo">
+
+        <a href="{{ url_for('home') }}" class="logo-link">
+
+            <span class="logo-icon">🛡️</span>
+
+            <div class="logo-text">
+
+                <h2>Cyber Threat Analytics</h2>
+
+                <p>AI Powered Security Platform</p>
+
+            </div>
+
+        </a>
+
+    </div>
+
+
+    <!-- Navigation -->
+    <ul class="navbar-menu">
+
+        <li>
+            <a href="{{ url_for('home') }}" class="active">
+                Home
+            </a>
+        </li>
+
+
+        <li>
+            <a href="#features">
+                Features
+            </a>
+        </li>
+
+
+        <li>
+            <a href="#analytics">
+                Analytics
+            </a>
+        </li>
+
+
+        <li>
+            <a href="#about">
+                About
+            </a>
+        </li>
+
+
+        <li>
+            <a href="#contact">
+                Contact
+            </a>
+        </li>
+
+
+    </ul>
+
+
+    <!-- Authentication Buttons -->
+
+    <div class="navbar-actions">
+
+        <a href="{{ url_for('auth.register') }}" class="btn-outline">
+            Register
+        </a>
+
+
+        <a href="{{ url_for('auth.login') }}" class="btn-primary">
+            Login
+        </a>
+
+    </div>
+
+
+</nav>
