@@ -5,40 +5,28 @@ Register | Cybersecurity Threat Analytics
 {% endblock %}
 
 {% block extra_css %}
-
 <link rel="stylesheet"
       href="{{ url_for('static', filename='css/register.css') }}">
-
 {% endblock %}
 
 {% block content %}
 
 <section class="auth-page">
 
-    <!-- Background -->
-
     <div class="background-grid"></div>
 
     <div class="auth-container">
 
-        <!-- ==========================================
-             LEFT SIDE
-        =========================================== -->
+        <!-- Left Side -->
 
         <div class="auth-left">
 
             <div class="brand">
 
-                <h1>
-
-                    🛡 Cyber Threat Analytics
-
-                </h1>
+                <h1>🛡 Cyber Threat Analytics</h1>
 
                 <p>
-
                     AI Powered Cybersecurity Analytics Platform
-
                 </p>
 
             </div>
@@ -47,48 +35,30 @@ Register | Cybersecurity Threat Analytics
 
                 <div class="feature-card">
 
-                    <h3>
-
-                        Secure Authentication
-
-                    </h3>
+                    <h3>AI Threat Detection</h3>
 
                     <p>
-
-                        Create your secure account using encrypted password protection.
-
+                        Detect malicious cyber attacks using Artificial Intelligence.
                     </p>
 
                 </div>
 
                 <div class="feature-card">
 
-                    <h3>
-
-                        AI Powered Analytics
-
-                    </h3>
+                    <h3>Real-Time Monitoring</h3>
 
                     <p>
-
-                        Access AI-driven cybersecurity analytics and threat intelligence.
-
+                        Monitor your network traffic in real time.
                     </p>
 
                 </div>
 
                 <div class="feature-card">
 
-                    <h3>
-
-                        Real-Time Monitoring
-
-                    </h3>
+                    <h3>Threat Prediction</h3>
 
                     <p>
-
-                        Monitor threats, risks and analytics through interactive dashboards.
-
+                        Predict future cyber attacks using Machine Learning.
                     </p>
 
                 </div>
@@ -97,272 +67,101 @@ Register | Cybersecurity Threat Analytics
 
         </div>
 
-        <!-- ==========================================
-             RIGHT SIDE
-        =========================================== -->
+        <!-- Right Side -->
 
         <div class="auth-right">
 
             <div class="login-card">
 
-                <h2>
-
-                    Create Account
-
-                </h2>
+                <h2>Create Account</h2>
 
                 <p>
 
-                    Register to access Cybersecurity Threat Analytics
+                    Register to continue
 
                 </p>
 
                 <form
-
-                    id="registerForm"
-
                     action="{{ url_for('auth.register') }}"
-
                     method="POST">
 
-                    <!-- =======================
-                         First Name
-                    ======================== -->
-
                     <div class="input-group">
 
-                        <label>
-
-                            First Name
-
-                        </label>
+                        <label>Full Name</label>
 
                         <input
-
                             type="text"
-
-                            id="first_name"
-
-                            name="first_name"
-
-                            placeholder="Enter your first name"
-
-                            autocomplete="given-name"
-
+                            name="fullname"
+                            placeholder="Enter Full Name"
                             required>
 
                     </div>
 
-                    <!-- =======================
-                         Last Name
-                    ======================== -->
-
                     <div class="input-group">
 
-                        <label>
-
-                            Last Name
-
-                        </label>
+                        <label>Username</label>
 
                         <input
-
                             type="text"
-
-                            id="last_name"
-
-                            name="last_name"
-
-                            placeholder="Enter your last name"
-
-                            autocomplete="family-name"
-
+                            name="username"
+                            placeholder="Choose Username"
                             required>
 
                     </div>
 
-                    <!-- =======================
-                         Email
-                    ======================== -->
-
                     <div class="input-group">
 
-                        <label>
-
-                            Email Address
-
-                        </label>
+                        <label>Email</label>
 
                         <input
-
                             type="email"
-
-                            id="email"
-
                             name="email"
-
-                            placeholder="Enter your email"
-
-                            autocomplete="email"
-
+                            placeholder="Enter Email"
                             required>
 
                     </div>
 
-                    <!-- =======================
-                         Phone Number
-                    ======================== -->
-
                     <div class="input-group">
 
-                        <label>
-
-                            Phone Number
-
-                        </label>
+                        <label>Password</label>
 
                         <input
-
-                            type="tel"
-
-                            id="phone"
-
-                            name="phone"
-
-                            placeholder="Enter your phone number"
-
-                            autocomplete="tel"
-
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Create Password"
+                            autocomplete="new-password"
                             required>
 
                     </div>
 
-                    <!-- =======================
-                         Password
-                    ======================== -->
-
                     <div class="input-group">
 
-                        <label>
+                        <label>Confirm Password</label>
 
-                            Password
-
-                        </label>
-
-                        <div class="password-box">
-
-                            <input
-
-                                type="password"
-
-                                id="password"
-
-                                name="password"
-
-                                placeholder="Create a password"
-
-                                autocomplete="new-password"
-
-                                required>
-
-                            <button
-
-                                type="button"
-
-                                id="togglePassword"
-
-                                class="eye-btn">
-
-                                👁
-
-                            </button>
-
-                        </div>
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirm_password"
+                            placeholder="Confirm Password"
+                            autocomplete="new-password"
+                            required>
 
                     </div>
-
-                    <!-- =======================
-                         Confirm Password
-                    ======================== -->
-
-                    <div class="input-group">
-
-                        <label>
-
-                            Confirm Password
-
-                        </label>
-
-                        <div class="password-box">
-
-                            <input
-
-                                type="password"
-
-                                id="confirm_password"
-
-                                name="confirm_password"
-
-                                placeholder="Confirm your password"
-
-                                autocomplete="new-password"
-
-                                required>
-
-                            <button
-
-                                type="button"
-
-                                id="toggleConfirmPassword"
-
-                                class="eye-btn">
-
-                                👁
-
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                                        <!-- =======================
-                         Terms & Conditions
-                    ======================== -->
 
                     <div class="remember-row">
 
-                        <label class="checkbox-label">
+                        <label>
 
                             <input
                                 type="checkbox"
-                                id="terms"
-                                name="terms"
                                 required>
 
-                            I agree to the
-
-                            <a href="#">
-
-                                Terms & Conditions
-
-                            </a>
-
-                            and
-
-                            <a href="#">
-
-                                Privacy Policy
-
-                            </a>
+                            I agree to the Terms & Conditions
 
                         </label>
 
                     </div>
-
-
-                    <!-- =======================
-                         Register Button
-                    ======================== -->
 
                     <button
                         type="submit"
@@ -373,11 +172,6 @@ Register | Cybersecurity Threat Analytics
                     </button>
 
                 </form>
-
-
-                <!-- =======================
-                     Bottom Link
-                ======================== -->
 
                 <div class="bottom-link">
 
@@ -400,7 +194,6 @@ Register | Cybersecurity Threat Analytics
 </section>
 
 {% endblock %}
-
 
 {% block extra_js %}
 

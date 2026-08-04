@@ -1,8 +1,18 @@
 {% extends "base.html" %}
 
+<!-- ==========================================
+Page Title
+========================================== -->
+
 {% block title %}
+
 Login | Cybersecurity Threat Analytics
+
 {% endblock %}
+
+<!-- ==========================================
+Page CSS
+========================================== -->
 
 {% block extra_css %}
 
@@ -10,6 +20,10 @@ Login | Cybersecurity Threat Analytics
       href="{{ url_for('static', filename='css/login.css') }}">
 
 {% endblock %}
+
+<!-- ==========================================
+Main Content
+========================================== -->
 
 {% block content %}
 
@@ -19,9 +33,9 @@ Login | Cybersecurity Threat Analytics
 
     <div class="auth-container">
 
-        <!-- =======================================
-             LEFT SIDE
-        ======================================== -->
+        <!-- ==========================================
+             Left Side
+        =========================================== -->
 
         <div class="auth-left">
 
@@ -45,8 +59,7 @@ Login | Cybersecurity Threat Analytics
 
                     <p>
 
-                        Detect suspicious network traffic using
-                        Machine Learning.
+                        Detect suspicious network traffic using Machine Learning.
 
                     </p>
 
@@ -58,8 +71,7 @@ Login | Cybersecurity Threat Analytics
 
                     <p>
 
-                        AI generated security insights and
-                        recommendations.
+                        AI-generated security insights and recommendations.
 
                     </p>
 
@@ -71,8 +83,7 @@ Login | Cybersecurity Threat Analytics
 
                     <p>
 
-                        Interactive charts and real-time
-                        cybersecurity analytics.
+                        Interactive charts and real-time cybersecurity analytics.
 
                     </p>
 
@@ -82,19 +93,15 @@ Login | Cybersecurity Threat Analytics
 
         </div>
 
-        <!-- =======================================
-             RIGHT SIDE
-        ======================================== -->
+        <!-- ==========================================
+             Right Side
+        =========================================== -->
 
         <div class="auth-right">
 
             <div class="login-card">
 
-                <h2>
-
-                    Welcome Back
-
-                </h2>
+                <h2>Welcome Back</h2>
 
                 <p>
 
@@ -102,33 +109,25 @@ Login | Cybersecurity Threat Analytics
 
                 </p>
 
-                <form
-                    action="{{ url_for('auth.login') }}"
-                    method="POST"
-                    id="loginForm">
+                <form action="{{ url_for('auth.login') }}"
+                      method="POST">
 
                     <!-- Email -->
 
                     <div class="input-group">
 
-                        <label>
+                        <label for="email">
 
                             Email Address
 
                         </label>
 
                         <input
-
-                            id="email"
-
                             type="email"
-
+                            id="email"
                             name="email"
-
                             placeholder="Enter your email"
-
                             autocomplete="email"
-
                             required>
 
                     </div>
@@ -137,45 +136,23 @@ Login | Cybersecurity Threat Analytics
 
                     <div class="input-group">
 
-                        <label>
+                        <label for="password">
 
                             Password
 
                         </label>
 
-                        <div class="password-box">
-
-                            <input
-
-                                id="password"
-
-                                type="password"
-
-                                name="password"
-
-                                placeholder="Enter your password"
-
-                                autocomplete="current-password"
-
-                                required>
-
-                            <button
-
-                                type="button"
-
-                                id="togglePassword"
-
-                                class="eye-btn">
-
-                                👁
-
-                            </button>
-
-                        </div>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required>
 
                     </div>
 
-                    <!-- Remember -->
+                    <!-- Remember Me -->
 
                     <div class="remember-row">
 
@@ -197,12 +174,10 @@ Login | Cybersecurity Threat Analytics
 
                     </div>
 
-                    <!-- Button -->
+                    <!-- Login Button -->
 
                     <button
-
                         type="submit"
-
                         class="login-btn">
 
                         Login
@@ -210,6 +185,8 @@ Login | Cybersecurity Threat Analytics
                     </button>
 
                 </form>
+
+                <!-- Bottom Link -->
 
                 <div class="bottom-link">
 
@@ -232,6 +209,10 @@ Login | Cybersecurity Threat Analytics
 </section>
 
 {% endblock %}
+
+<!-- ==========================================
+Page JavaScript
+========================================== -->
 
 {% block extra_js %}
 

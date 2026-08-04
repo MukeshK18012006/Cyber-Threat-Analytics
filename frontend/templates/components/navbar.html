@@ -1,6 +1,9 @@
 <nav class="navbar">
 
-    <!-- Logo -->
+    <!-- ==========================================
+                    LOGO
+    =========================================== -->
+
     <div class="navbar-logo">
 
         <a href="{{ url_for('home') }}" class="logo-link">
@@ -19,62 +22,86 @@
 
     </div>
 
+    <!-- ==========================================
+                NAVIGATION MENU
+    =========================================== -->
 
-    <!-- Navigation -->
     <ul class="navbar-menu">
 
         <li>
-            <a href="{{ url_for('home') }}" class="active">
+
+            <a href="{{ url_for('home') }}">
+
                 Home
+
             </a>
+
         </li>
 
-
         <li>
-            <a href="#features">
+
+            <a href="{{ url_for('home') }}#features">
+
                 Features
+
             </a>
+
         </li>
 
-
         <li>
-            <a href="#analytics">
+
+            <a href="{{ url_for('home') }}#analytics">
+
                 Analytics
+
             </a>
+
         </li>
 
-
         <li>
-            <a href="#about">
+
+            <a href="{{ url_for('home') }}#about">
+
                 About
-            </a>
-        </li>
 
+            </a>
+
+        </li>
 
         <li>
-            <a href="#contact">
-                Contact
-            </a>
-        </li>
 
+            <a href="{{ url_for('home') }}#contact">
+
+                Contact
+
+            </a>
+
+        </li>
 
     </ul>
 
-
-    <!-- Authentication Buttons -->
+    <!-- ==========================================
+                RIGHT SIDE BUTTONS
+    =========================================== -->
 
     <div class="navbar-actions">
 
-        <a href="{{ url_for('auth.register') }}" class="btn-outline">
+        <a
+            href="{{ url_for('auth.register') }}"
+            class="btn-outline">
+
             Register
+
         </a>
 
+        <a
+            href="{{ url_for('auth.login') }}"
+            class="btn-primary">
 
-        <a href="{{ url_for('auth.login') }}" class="btn-primary">
             Login
+
         </a>
 
     </div>
-
 
 </nav>

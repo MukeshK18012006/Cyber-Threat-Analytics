@@ -52,7 +52,7 @@
           rel="stylesheet">
 
     <!-- ===========================
-         CSS Files
+         Global CSS Files
     ============================ -->
 
     <link rel="stylesheet"
@@ -73,11 +73,20 @@
     <link rel="stylesheet"
           href="{{ url_for('static', filename='css/auth.css') }}">
 
+    <!-- Flash Message CSS -->
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/flash.css') }}">
+
     <link rel="stylesheet"
           href="{{ url_for('static', filename='css/animations.css') }}">
 
     <link rel="stylesheet"
           href="{{ url_for('static', filename='css/responsive.css') }}">
+
+    <!-- ===========================
+         Page Specific CSS
+    ============================ -->
 
     {% block extra_css %}
 
@@ -86,6 +95,32 @@
 </head>
 
 <body>
+
+    <!-- ===========================
+         Flash Messages
+    ============================ -->
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+
+        {% if messages %}
+
+            <div class="flash-container">
+
+                {% for category, message in messages %}
+
+                    <div class="flash-message {{ category }}">
+
+                        {{ message }}
+
+                    </div>
+
+                {% endfor %}
+
+            </div>
+
+        {% endif %}
+
+    {% endwith %}
 
     <!-- ===========================
          Navigation Bar
@@ -107,7 +142,7 @@
 
     <!-- ===========================
          Footer
-         (Will be added in Phase 2.5)
+         (Will be added later)
     ============================ -->
 
     {#
@@ -115,10 +150,14 @@
     #}
 
     <!-- ===========================
-         JavaScript
+         Global JavaScript
     ============================ -->
 
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+    <!-- ===========================
+         Page Specific JavaScript
+    ============================ -->
 
     {% block extra_js %}
 

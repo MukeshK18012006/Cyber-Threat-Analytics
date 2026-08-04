@@ -1,0 +1,73 @@
+.flash-container{
+
+    position:fixed;
+
+    top:20px;
+
+    right:20px;
+
+    z-index:99999;
+
+}
+
+.flash-message{
+
+    padding:15px 25px;
+
+    margin-bottom:15px;
+
+    border-radius:10px;
+
+    color:white;
+
+    font-weight:600;
+
+    min-width:280px;
+
+    animation:fadeIn .5s;
+
+}
+
+.success{
+
+    background:#16a34a;
+
+}
+
+.warning{
+
+    background:#d97706;
+
+}
+
+.danger{
+
+    background:#dc2626;
+
+}
+
+.info{
+
+    background:#2563eb;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}

@@ -1,26 +1,62 @@
-"""
-Authentication Models
+from datetime import datetime
 
-Later this file will contain
+from backend.extensions import db
 
-User Model
-Admin Model
-Role Model
 
-using SQLAlchemy
-"""
+class User(db.Model):
 
-class User:
+    __tablename__ = "users"
 
-    def __init__(
-        self,
-        username,
-        email,
-        password
-    ):
+    # ==========================================
+    # Primary Key
+    # ==========================================
 
-        self.username = username
+    id = db.Column(
+        db.Integer,
+        primary_key=True
+    )
 
-        self.email = email
+    # ==========================================
+    # User Information
+    # ==========================================
 
-        self.password = password
+    full_name = db.Column(
+        db.String(100),
+        nullable=False
+    )
+
+    username = db.Column(
+        db.String(50),
+        unique=True,
+        nullable=False
+    )
+
+    email = db.Column(
+        db.String(120),
+        unique=True,
+        nullable=False
+    )
+
+    # Store HASHED password
+    password = db.Column(
+        db.String(255),
+        nullable=False
+    )
+
+    # ==========================================
+    # Account Status
+    # ==========================================
+
+    created_at = db.Column(
+        db.DateTime,
+        default=datetime.utcnow
+    )
+
+    is_active = db.Column(
+        db.Boolean,
+        default=True
+    )
+
+    def __repr__(self):
+
+        return f"<User {self.username}>"
